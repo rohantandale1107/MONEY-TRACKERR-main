@@ -1,5 +1,17 @@
-
-const link1 = document.getElementById("button1");
+window.addEventListener("load", function () {
+    const loader = document.getElementById("loaderWrapper");
+    loader.style.display = "none";
+  });
+  function scrollToElement(elementSelector, instance = 0) {
+    // Select all elements that match the given selector
+    const elements = document.querySelectorAll(elementSelector);
+    // Check if there are elements matching the selector and if the requested instance exists
+    if (elements.length > instance) {
+        // Scroll to the specified instance of the element
+        elements[instance].scrollIntoView({ behavior: 'smooth' });
+    }
+}
+const button1 = document.getElementById("button1");
 const link = document.getElementById("link");
 button1.addEventListener('click', () => {
     scrollToElement('.form');
